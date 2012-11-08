@@ -97,8 +97,6 @@ void testApp::draw(){
 		edgeDetectShader.begin();
 		edgeDetectShader.setUniformTexture("depthTex", depthFBO.getTextureReference(), 1);
 		edgeDetectShader.setUniformTexture("tex", modelFBO.getTextureReference(), 2);
-		edgeDetectShader.setUniform1f("width", ofGetWidth() * 1.0f);
-		edgeDetectShader.setUniform1f("height", ofGetHeight() * 1.0f);
 		edgeFBO.begin();
 		ofClear(0, 0, 0, 0);
 		drawRect();
